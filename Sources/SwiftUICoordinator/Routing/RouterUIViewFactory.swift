@@ -1,6 +1,5 @@
 import Foundation
 import UIKit
-import SwiftUICoordinator
 
 @MainActor
 public protocol RouterUIViewFactory {

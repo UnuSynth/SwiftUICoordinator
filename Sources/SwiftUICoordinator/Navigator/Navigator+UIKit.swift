@@ -1,6 +1,5 @@
 import Foundation
 import UIKit
-import SwiftUICoordinator
 
 public extension Navigator where Self: RouterUIViewFactory {
     
