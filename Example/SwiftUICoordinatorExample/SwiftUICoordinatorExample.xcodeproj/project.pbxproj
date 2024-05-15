@@ -32,6 +32,10 @@
 		17F1184529CC8CF6004755DB /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F1184429CC8CF6004755DB /* Star.swift */; };
 		17F1184729CC8F1A004755DB /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F1184629CC8F1A004755DB /* Tower.swift */; };
 		182274C729C09C94001F9B50 /* SwiftUICoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 182274C629C09C94001F9B50 /* SwiftUICoordinator */; };
+		D4E84C4C2BF4C4450006E7F9 /* UIKitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E84C4B2BF4C4450006E7F9 /* UIKitCoordinator.swift */; };
+		D4E84C4E2BF4C48F0006E7F9 /* RouterUIViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E84C4D2BF4C48F0006E7F9 /* RouterUIViewFactory.swift */; };
+		D4E84C502BF4C5980006E7F9 /* Navigator+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E84C4F2BF4C5980006E7F9 /* Navigator+UIKit.swift */; };
+		D4E84C542BF4CF510006E7F9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E84C532BF4CF510006E7F9 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,10 @@
 		17F1184429CC8CF6004755DB /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		17F1184629CC8F1A004755DB /* Tower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower.swift; sourceTree = "<group>"; };
 		182274C529C09C79001F9B50 /* SwiftUICoordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUICoordinator; path = ../..; sourceTree = "<group>"; };
+		D4E84C4B2BF4C4450006E7F9 /* UIKitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitCoordinator.swift; sourceTree = "<group>"; };
+		D4E84C4D2BF4C48F0006E7F9 /* RouterUIViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterUIViewFactory.swift; sourceTree = "<group>"; };
+		D4E84C4F2BF4C5980006E7F9 /* Navigator+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigator+UIKit.swift"; sourceTree = "<group>"; };
+		D4E84C532BF4CF510006E7F9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 				17C379722ACEDFBD00CA4105 /* Dependencies */,
 				176F3CB629B8C01E009C4987 /* Coordinators */,
 				1769698C2AB49FB700CD6696 /* DeepLink */,
+				D4E84C512BF4CF370006E7F9 /* VCs */,
 				176F3CB329B8BD92009C4987 /* Views */,
 				17360A3F2A1275C000DB2296 /* Transitions */,
 				1732C9FF29A6607800C2BC1F /* Assets.xcassets */,
@@ -153,6 +162,7 @@
 		176F3CB629B8C01E009C4987 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				D4E84C4A2BF4C4330006E7F9 /* UIKitCoordinator */,
 				17C379702ACEDD7800CA4105 /* AppCoordinator.swift */,
 				176F3CB929B8C143009C4987 /* Shapes */,
 				17F1183929CC6648004755DB /* CustomShapes */,
@@ -213,6 +223,32 @@
 				182274C529C09C79001F9B50 /* SwiftUICoordinator */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		D4E84C4A2BF4C4330006E7F9 /* UIKitCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D4E84C4B2BF4C4450006E7F9 /* UIKitCoordinator.swift */,
+				D4E84C4D2BF4C48F0006E7F9 /* RouterUIViewFactory.swift */,
+				D4E84C4F2BF4C5980006E7F9 /* Navigator+UIKit.swift */,
+			);
+			path = UIKitCoordinator;
+			sourceTree = "<group>";
+		};
+		D4E84C512BF4CF370006E7F9 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				D4E84C522BF4CF410006E7F9 /* TestVC */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		D4E84C522BF4CF410006E7F9 /* TestVC */ = {
+			isa = PBXGroup;
+			children = (
+				D4E84C532BF4CF510006E7F9 /* TestViewController.swift */,
+			);
+			path = TestVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,13 +325,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1769698E2AB49FCF00CD6696 /* DeepLinkHandler.swift in Sources */,
+				D4E84C542BF4CF510006E7F9 /* TestViewController.swift in Sources */,
 				17AABAEF2A6D5E1500AFE8A7 /* CustomShapesAction.swift in Sources */,
 				176969912AB4AFD200CD6696 /* DependencyContainer.swift in Sources */,
 				17F1183729CC63C0004755DB /* CustomShapesView.swift in Sources */,
 				17F1183B29CC6678004755DB /* SimpleShapesCoordinator.swift in Sources */,
 				17F1184729CC8F1A004755DB /* Tower.swift in Sources */,
+				D4E84C4E2BF4C48F0006E7F9 /* RouterUIViewFactory.swift in Sources */,
 				17F1184329CC8BA6004755DB /* Triangle.swift in Sources */,
 				1732C9FC29A6607500C2BC1F /* SwiftUICoordinatorExampleApp.swift in Sources */,
+				D4E84C502BF4C5980006E7F9 /* Navigator+UIKit.swift in Sources */,
 				17F1184529CC8CF6004755DB /* Star.swift in Sources */,
 				17C379742ACEE1EA00CA4105 /* CoordinatorFactory.swift in Sources */,
 				17AABAF12A6D5F2100AFE8A7 /* ShapesAction.swift in Sources */,
@@ -304,6 +343,7 @@
 				176F3CB529B8BF71009C4987 /* ShapeListView.swift in Sources */,
 				17C379712ACEDD7800CA4105 /* AppCoordinator.swift in Sources */,
 				17360A412A1275D600DB2296 /* FadeTransition.swift in Sources */,
+				D4E84C4C2BF4C4450006E7F9 /* UIKitCoordinator.swift in Sources */,
 				17F1183D29CC668F004755DB /* SimpleShapesRoute.swift in Sources */,
 				17F1183529CC63B1004755DB /* SimpleShapesView.swift in Sources */,
 				176F3CBB29B8C162009C4987 /* ShapesRoute.swift in Sources */,

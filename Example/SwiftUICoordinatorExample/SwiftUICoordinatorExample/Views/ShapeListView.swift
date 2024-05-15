@@ -16,6 +16,12 @@ struct ShapeListView<Coordinator: Routing>: View {
     var body: some View {
         List {
             Button {
+                viewModel.didTapUIKitCoordinator()
+            } label: {
+                Text("UIKitCoordinator")
+            }
+            
+            Button {
                 viewModel.didTapBuiltIn()
             } label: {
                 Text("Simple")
@@ -40,6 +46,10 @@ struct ShapeListView<Coordinator: Routing>: View {
 extension ShapeListView {
     @MainActor class ViewModel<R: Routing>: ObservableObject {
         var coordinator: R?
+        
+        func didTapUIKitCoordinator() {
+            coordinator?.handle(ShapesAction.uiKitCoordinator)
+        }
 
         func didTapBuiltIn() {
             coordinator?.handle(ShapesAction.simpleShapes)

@@ -9,6 +9,7 @@ import Foundation
 import SwiftUICoordinator
 
 enum ShapesAction: CoordinatorAction {
+    case uiKitCoordinator
     case simpleShapes
     case customShapes
     case featuredShape(NavigationRoute)

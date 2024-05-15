@@ -34,6 +34,9 @@ class ShapesCoordinator: Routing {
     
     func handle(_ action: CoordinatorAction) {
         switch action {
+        case ShapesAction.uiKitCoordinator:
+            let coordinator = UIKitCoordinator(parent: self, navigationController: navigationController)
+            try? coordinator.start()
         case ShapesAction.simpleShapes:
             let coordinator = factory.makeSimpleShapesCoordinator(parent: self)
             try? coordinator.start()
